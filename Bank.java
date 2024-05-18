@@ -55,5 +55,17 @@ public class Bank {
         Account account = findAccount(accountId);
         account.deposit(amount);
     }
-    
+
+    public List<Account> getAccountsList() {
+        return accountsList;
+    }
+
+    public double getTotalTransactionFees() {
+        return totalTransactionFees;
+    }
+
+    public double getTotalTransferAmount() {
+        return totalTransferAmount;
+    }
+
 }

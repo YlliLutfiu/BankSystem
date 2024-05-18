@@ -10,4 +10,20 @@ public class Transaction{
         this.resultingAccountId = resultingAccountId;
         this.transactionReason = transactionReason;
     }
+
+    public double getAmount() {
+        return amount;
+    }
+
+    public String getOriginatingAccountId() {
+        return originatingAccountId;
+    }
+
+    public String getResultingAccountId() {
+        return resultingAccountId;
+    }
+
+    public String getTransactionReason() {
+        return transactionReason;
+    }
 }

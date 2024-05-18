@@ -36,9 +36,11 @@ public class Account {
         return accountId;
     }
 
+    public double getAccountBalance() {
+        return accountBalance;
+    }
+
     public List<Transaction> getTransactions() {
         return transactions;
     }
-
-
 }
