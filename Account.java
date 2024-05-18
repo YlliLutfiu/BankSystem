@@ -13,4 +13,32 @@ public class Account {
         this.accountBalance = initialBalance;
         this.transactions = new ArrayList<>();
     }
+
+    public void deposit(double amount) {
+        if (amount > 0) {
+            accountBalance += amount;
+            transactions.add(new Transaction(amount, accountId, accountId, "Deposit"));
+        } else {
+            throw new IllegalArgumentException("Deposit amount must be positive");
+        }
+    }
+
+    public void withdraw(double amount) throws Exception {
+        if (amount > 0 && accountBalance >= amount) {
+            accountBalance -= amount;
+            transactions.add(new Transaction(amount, accountId, accountId, "Withdrawal"));
+        } else {
+            throw new Exception("Insufficient funds or invalid amount");
+        }
+    }
+
+    public String getAccountId() {
+        return accountId;
+    }
+
+    public List<Transaction> getTransactions() {
+        return transactions;
+    }
+
+
 }
